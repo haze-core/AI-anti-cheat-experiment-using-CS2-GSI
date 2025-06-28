@@ -42,18 +42,18 @@ namespace CounterStrike2GSI_Example_program
             int amountOfAllLayers = layerChildCount.Length;
             var rand = new Random();
 
-            // Allocate each layer with weights except the data input layer
-            // Allocated: [Amount of layers except the data input layer][Amount of neurons - Not allocated][Amount of input weights - Not allocated]
+            // Allocate each layer with weights
+            // Allocated: [Amount of layers][Amount of neurons - Not allocated][Amount of input weights - Not allocated]
             neuron_weights = new double[amountOfAllLayers][][];
             // Weights aren't used in the input layer
             neuron_weights[0] = null;
-            // Allocate each layer with biases except the data input layer
-            // Allocated: [Amount of layers except the data input layer][Amount of neurons - Not allocated]
+            // Allocate each layer with biases
+            // Allocated: [Amount of layers][Amount of neurons - Not allocated]
             neuron_biases = new double[amountOfAllLayers][];
             // Biases aren't used in the input layer
             neuron_biases[0] = null;
-            // Allocate each layer with outputs including the data input layer
-            // Allocated: [Amount of layers except the data input layer][Amount of neurons - Not allocated]
+            // Allocate each layer with outputs
+            // Allocated: [Amount of layers][Amount of neurons - Not allocated]
             neuron_outputs = new double[amountOfAllLayers][];
 
             for (int currentLayer = 1; currentLayer < amountOfAllLayers; currentLayer++)
