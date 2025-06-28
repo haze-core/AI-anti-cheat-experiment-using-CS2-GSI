@@ -1,5 +1,7 @@
-# AI-anti-cheat-experiment-using-CS2-GSI
-Very simple, barebones anti-cheat using Counter-Strike 2 Game State Integration. Very small dataset, a neural network from scratch. It is just an experimental project, not meant to be a full production ready Anti-Cheat.
+# AI Anti-Cheat Experiment Using CS2 GSI
+A very simple, barebones anti-cheat prototype for Counter-Strike 2, using Game State Integration (GSI). It uses a small dataset and a neural network built from scratch.
+⚠️ This is an experimental project and not intended to be production-ready.
 
-# How to use
-Visit https://github.com/antonpup/CounterStrike2GSI and read instruction to install "CounterStrike2GSI" package to your project through NuGet.
+# How to Use
+To get started, install the CounterStrike2GSI package by following the instructions here:
+🔗 https://github.com/antonpup/CounterStrike2GSI
