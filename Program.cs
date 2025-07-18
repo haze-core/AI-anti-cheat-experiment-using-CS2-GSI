@@ -93,11 +93,11 @@ namespace CounterStrike2GSI_Example_program
 
         public double[] Predict(double[] input)
         {
-            // Step 1: Copy input to the input layer's outputs
+            // Copy input to the input layer's outputs
             for (int i = 0; i < input.Length; i++)
                 neuron_outputs[0][i] = input[i];
 
-            // Step 2: Loop through each layer (starting from 1, since layer 0 is input)
+            // Loop through each layer (starting from 1, since layer 0 is input)
             for (int layer = 1; layer < neuron_outputs.Length; layer++)
             {
                 for (int neuron = 0; neuron < neuron_outputs[layer].Length; neuron++)
@@ -116,7 +116,7 @@ namespace CounterStrike2GSI_Example_program
                 }
             }
 
-            // Step 3: Return final layer's outputs
+            // Return final layer's outputs
             return neuron_outputs[neuron_outputs.Length - 1];
         }
 
@@ -143,7 +143,7 @@ namespace CounterStrike2GSI_Example_program
                 gradients[lastLayer][i] = error * activation.Derivative(neuron_outputs[lastLayer][i]);
             }
 
-            // Step 2b: Backpropagate error to hidden layers
+            // Backpropagate error to hidden layers
             for (int layer = lastLayer - 1; layer >= 1; layer--)
             {
                 int neuronCount = neuron_outputs[layer].Length;
@@ -167,7 +167,7 @@ namespace CounterStrike2GSI_Example_program
                 }
             }
 
-            // Step 3: Update weights and biases
+            // Update weights and biases
             for (int layer = 1; layer < neuron_outputs.Length; layer++)
             {
                 int neuronCount = neuron_outputs[layer].Length;
